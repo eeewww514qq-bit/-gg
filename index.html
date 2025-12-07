@@ -32,10 +32,6 @@
             gap: 20px;
         }
 
-        .button-container a {
-            text-decoration: none;
-        }
-
         .button {
             color: white;
             padding: 16px 0;
@@ -79,17 +75,25 @@
 <body>
     <h1>欢迎！</h1>
     <div class="button-container">
-        <a href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" class="button button1" target="_blank">1号通道</a>
-        <a href="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home" class="button button2" target="_blank">2号通道</a>
-        <a href="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R" class="button button3" target="_blank">3号通道</a>
-        <a href="http://hjgnx0nn.692z.cc" class="button button4" target="_blank">4号通道</a>
-        <a href="https://tzforbu.yafpn.cn/#/?code=ufbq75" class="button button5" target="_blank">5号通道</a>
+        <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">1号通道</div>
+        <div class="button button2" data-url="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home">2号通道</div>
+        <div class="button button3" data-url="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R">3号通道</div>
+        <div class="button button4" data-url="http://hjgnx0nn.692z.cc">4号通道</div>
+        <div class="button button5" data-url="https://tzforbu.yafpn.cn/#/?code=ufbq75">5号通道</div>
     </div>
 
     <script>
         // 禁用右键菜单
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault(); // 禁用右键菜单
+        });
+
+        // 给每个按钮添加点击事件，触发跳转
+        document.querySelectorAll('.button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var url = button.getAttribute('data-url');
+                window.open(url, '_blank'); // 通过 JavaScript 跳转到链接
+            });
         });
     </script>
 </body>
