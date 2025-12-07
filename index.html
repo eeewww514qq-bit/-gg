@@ -48,6 +48,7 @@
             transition: background-color 0.3s ease, opacity 0.3s ease;
             opacity: 0.8;
             user-select: none; /* 禁止文本选择 */
+            -webkit-user-select: none; /* 苹果设备上的禁用选择 */
         }
 
         .button:hover {
@@ -79,17 +80,24 @@
 <body>
     <h1>欢迎！</h1>
     <div class="button-container">
-        <a href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" class="button button1" target="_blank">1号通道      Go</a>
-        <a href="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home" class="button button2" target="_blank">2号通道     Go</a>
-        <a href="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R" class="button button3" target="_blank">3号通道     Go</a>
-        <a href="http://hjgnx0nn.692z.cc" class="button button4" target="_blank">4号通道     Go</a>
-        <a href="https://tzforbu.yafpn.cn/#/?code=ufbq75" class="button button5" target="_blank">5号通道     Go</a>
+        <a href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" class="button button1" target="_blank">1号通道</a>
+        <a href="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home" class="button button2" target="_blank">2号通道</a>
+        <a href="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R" class="button button3" target="_blank">3号通道</a>
+        <a href="http://hjgnx0nn.692z.cc" class="button button4" target="_blank">4号通道</a>
+        <a href="https://tzforbu.yafpn.cn/#/?code=ufbq75" class="button button5" target="_blank">5号通道</a>
     </div>
 
     <script>
         // 禁用右键菜单
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault(); // 禁用右键菜单
+        });
+
+        // 禁止在 iOS Safari 上长按时显示链接
+        document.querySelectorAll('.button').forEach(function(button) {
+            button.addEventListener('touchstart', function(e) {
+                e.preventDefault(); // 阻止长按显示链接地址
+            });
         });
     </script>
 </body>
