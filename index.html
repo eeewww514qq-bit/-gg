@@ -47,8 +47,7 @@
             border-radius: 8px;
             transition: background-color 0.3s ease, opacity 0.3s ease;
             opacity: 0.8;
-            user-select: text; /* 允许用户选择文本 */
-            -webkit-user-select: text; /* 在 iOS 上允许选择文本 */
+            user-select: none; /* 禁止文本选择 */
         }
 
         .button:hover {
@@ -91,13 +90,6 @@
         // 禁用右键菜单
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault(); // 禁用右键菜单
-        });
-
-        // 监听长按事件，只阻止放大行为
-        document.querySelectorAll('.button').forEach(function(button) {
-            button.addEventListener('touchstart', function(e) {
-                e.preventDefault(); // 阻止长按放大，但不影响文本选择
-            });
         });
     </script>
 </body>
