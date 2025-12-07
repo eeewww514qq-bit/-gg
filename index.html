@@ -93,10 +93,10 @@
             e.preventDefault(); // 禁用右键菜单
         });
 
-        // 禁止在 iOS Safari 上长按时显示链接
+        // 监听点击按钮，避免阻止默认行为
         document.querySelectorAll('.button').forEach(function(button) {
-            button.addEventListener('touchstart', function(e) {
-                e.preventDefault(); // 阻止长按显示链接地址
+            button.addEventListener('click', function(e) {
+                // 不阻止默认行为，确保按钮点击跳转
             });
         });
     </script>
