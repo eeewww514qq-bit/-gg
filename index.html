@@ -14,7 +14,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 0;
             background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMRj9pNQABhEt2lvMwCGiG1A4_XiUxDOEAAr0gAALRQKlVQg5sJUj5Zp42BA.jpeg');
             background-size: cover;  /* 确保背景图覆盖整个页面 */
             background-position: center;  /* 背景图居中 */
@@ -30,6 +30,7 @@
 
         h1 {
             color: #fff;
+            margin-top: 50px;
         }
 
         .button-container {
@@ -39,6 +40,7 @@
             width: 100%;  /* 使按钮容器宽度为100% */
             max-width: 500px; /* 设置按钮容器的最大宽度，避免按钮过大 */
             margin: 0 auto; /* 按钮容器居中 */
+            position: relative; /* 保证容器的定位不受背景影响 */
         }
 
         .button {
