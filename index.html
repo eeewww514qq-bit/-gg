@@ -8,29 +8,28 @@
         /* 设置 html 和 body 的高度为100% */
         html, body {
             height: 100%;
-            margin: 0; /* 取消默认边距 */
+            margin: 0;
         }
 
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMRj9pNQABhEt2lvMwCGiG1A4_XiUxDOEAAr0gAALRQKlVQg5sJUj5Zp42BA.jpeg'); /* 设置背景图 */
-            background-size: cover;  /* 确保背景图覆盖整个页面 */
-            background-position: center;  /* 背景图居中 */
-            background-color: #f0f0f0; /* 备用背景色（如果图片无法加载） */
-            background-attachment: fixed; /* 背景图固定，防止滚动 */
-            color: white;  /* 确保文字颜色与背景图对比清晰 */
-            min-height: 100%; /* 保证背景图始终覆盖整个页面 */
+            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMRj9pNQABhEt2lvMwCGiG1A4_XiUxDOEAAr0gAALRQKlVQg5sJUj5Zp42BA.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+            color: white;
+            min-height: 100%;
         }
 
         h1 {
-            color: #fff;  /* 设置标题字体颜色为白色，确保可读性 */
+            color: #fff;
         }
 
         .button-container {
             display: flex;
-            flex-direction: column; /* 按钮垂直排列 */
+            flex-direction: column;
             gap: 20px;
         }
 
@@ -39,31 +38,61 @@
         }
 
         .button {
-            background-color: #4CAF50;
             color: white;
-            padding: 16px 0; /* 增大按钮高度 */
-            width: 100%; /* 按钮宽度为100% */
-            max-width: 500px; /* 最大宽度500px，防止按钮太宽 */
-            margin: 0 auto; /* 居中显示 */
+            padding: 16px 0;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
             text-align: center;
             font-size: 18px;
             border-radius: 8px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.8;
+            user-select: none; /* 禁止选中文本 */
+            touch-action: manipulation; /* 禁用长按显示链接 */
         }
 
         .button:hover {
-            background-color: #45a049;
+            opacity: 1;
+        }
+
+        /* 设置不同颜色的按钮 */
+        .button1 {
+            background-color: rgba(76, 175, 80, 0.7);
+        }
+
+        .button2 {
+            background-color: rgba(33, 150, 243, 0.7);
+        }
+
+        .button3 {
+            background-color: rgba(255, 87, 34, 0.7);
+        }
+
+        .button4 {
+            background-color: rgba(156, 39, 176, 0.7);
+        }
+
+        .button5 {
+            background-color: rgba(255, 193, 7, 0.7);
         }
     </style>
 </head>
 <body>
     <h1>欢迎！</h1>
     <div class="button-container">
-        <a href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" class="button" target="_blank">1号通道</a>
-        <a href="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home" class="button" target="_blank">2号通道</a>
-        <a href="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R" class="button" target="_blank">3号通道</a>
-        <a href="http://hjgnx0nn.692z.cc" class="button" target="_blank">4号通道</a>
-        <a href="https://tzforbu.yafpn.cn/#/?code=ufbq75" class="button" target="_blank">5号通道</a>
+        <a href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" class="button button1" target="_blank">1号通道</a>
+        <a href="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home" class="button button2" target="_blank">2号通道</a>
+        <a href="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R" class="button button3" target="_blank">3号通道</a>
+        <a href="http://hjgnx0nn.692z.cc" class="button button4" target="_blank">4号通道</a>
+        <a href="https://tzforbu.yafpn.cn/#/?code=ufbq75" class="button button5" target="_blank">5号通道</a>
     </div>
+
+    <script>
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); // 禁用右键菜单
+        });
+    </script>
 </body>
 </html>
