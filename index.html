@@ -60,35 +60,35 @@
             font-size: 18px;
             border-radius: 8px;
             transition: background-color 0.3s ease, opacity 0.3s ease;
-            opacity: 0.95; /* 调整按钮透明度，减少透明感 */
+            opacity: 1; /* 完全不透明 */
             user-select: none; /* 禁止文本选择 */
             cursor: pointer;
             box-sizing: border-box; /* 确保内外边距计算正确 */
         }
 
         .button:hover {
-            opacity: 1;
+            opacity: 0.95; /* 悬停时减少透明度 */
         }
 
         /* 设置不同颜色的按钮 */
         .button1 {
-            background-color: rgba(76, 175, 80, 0.7);
+            background-color: rgba(76, 175, 80, 0.9); /* 设置较不透明的绿色 */
         }
 
         .button2 {
-            background-color: rgba(33, 150, 243, 0.7);
+            background-color: rgba(33, 150, 243, 0.9); /* 设置较不透明的蓝色 */
         }
 
         .button3 {
-            background-color: rgba(255, 87, 34, 0.7);
+            background-color: rgba(255, 87, 34, 0.9); /* 设置较不透明的橙色 */
         }
 
         .button4 {
-            background-color: rgba(156, 39, 176, 0.7);
+            background-color: rgba(156, 39, 176, 0.9); /* 设置较不透明的紫色 */
         }
 
         .button5 {
-            background-color: rgba(255, 193, 7, 0.7);
+            background-color: rgba(255, 193, 7, 0.9); /* 设置较不透明的黄色 */
         }
     </style>
 </head>
