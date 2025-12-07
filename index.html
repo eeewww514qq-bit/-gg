@@ -93,10 +93,10 @@
             e.preventDefault(); // 禁用右键菜单
         });
 
-        // 监听点击按钮，避免阻止默认行为
+        // 监听长按事件，阻止默认行为，防止文本放大或显示链接
         document.querySelectorAll('.button').forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                // 不阻止默认行为，确保按钮点击跳转
+            button.addEventListener('touchstart', function(e) {
+                e.preventDefault(); // 阻止长按时显示链接地址或放大
             });
         });
     </script>
