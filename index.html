@@ -40,7 +40,7 @@
 
         .button {
             color: white;
-            padding: 16px 0;
+            padding: 20px 0; /* 增加按钮高度 */
             width: 100%;
             max-width: 500px;
             margin: 0 auto;
@@ -51,6 +51,7 @@
             opacity: 0.8;
             user-select: none; /* 禁止文本选择 */
             cursor: pointer;
+            box-sizing: border-box; /* 确保内外边距计算正确 */
         }
 
         .button:hover {
