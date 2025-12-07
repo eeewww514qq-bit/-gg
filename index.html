@@ -11,15 +11,23 @@
             margin: 0; /* 去除默认的页边距 */
         }
 
+        /* 背景图固定不动，背景始终覆盖屏幕 */
+        .background {
+            position: fixed; /* 使用固定定位，确保背景不动 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMRj9pNQABhEt2lvMwCGiG1A4_XiUxDOEAAr0gAALRQKlVQg5sJUj5Zp42BA.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* 背景图位于最底层，内容部分在上面 */
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 0;
-            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMRj9pNQABhEt2lvMwCGiG1A4_XiUxDOEAAr0gAALRQKlVQg5sJUj5Zp42BA.jpeg');
-            background-size: cover;  /* 确保背景图覆盖整个页面 */
-            background-position: center;  /* 背景图居中 */
-            background-attachment: fixed; /* 背景图固定，防止滚动 */
-            background-color: #f0f0f0; /* 备用背景色（如果图片无法加载） */
             color: white;
             min-height: 100vh; /* 保证背景图始终覆盖整个视口高度 */
             display: flex;
@@ -40,7 +48,6 @@
             width: 100%;  /* 使按钮容器宽度为100% */
             max-width: 500px; /* 设置按钮容器的最大宽度，避免按钮过大 */
             margin: 0 auto; /* 按钮容器居中 */
-            position: relative; /* 保证容器的定位不受背景影响 */
         }
 
         .button {
@@ -86,6 +93,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div> <!-- 固定背景图层 -->
     <h1>欢迎！</h1>
     <div class="button-container">
         <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">1号通道</div>
