@@ -38,8 +38,8 @@
 
         h1 {
             color: #fff;
-            margin-top: 20px; /* 减少顶部间距 */
-            font-size: 36px; /* 增大标题字体 */
+            margin-top: 30px; /* 减少顶部间距，文字和按钮更接近 */
+            font-size: 24px; /* 调整为三分之一 */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
         }
 
@@ -54,12 +54,15 @@
         }
 
         .button {
+            display: flex;
+            justify-content: space-between; /* 使文字和GO按钮两侧分开 */
+            align-items: center; /* 垂直居中 */
             color: white;
             padding: 15px 0; /* 增加按钮高度 */
             width: 80%; /* 让按钮宽度为容器的80% */
             max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
             margin: 0 auto;
-            text-align: center;
+            text-align: left; /* 让文字左对齐 */
             font-size: 20px; /* 增大按钮字体 */
             border-radius: 12px; /* 增加按钮圆角，显得更柔和 */
             transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -68,6 +71,8 @@
             cursor: pointer;
             box-sizing: border-box; /* 确保内外边距计算正确 */
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* 为按钮文字加上阴影 */
+            padding-left: 20px; /* 为文字和按钮左边增加一点间距 */
+            padding-right: 20px; /* 为右侧的GO按钮加一点间距 */
         }
 
         .button:hover {
@@ -94,17 +99,38 @@
         .button5 {
             background-color: rgba(25, 118, 210, 0.8); /* 透明的亮蓝色 */
         }
+
+        .go-text {
+            font-size: 14px; /* GO 字样的字体稍微小一点 */
+            font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
+            letter-spacing: 1px; /* 适当的字间距，让它更明显 */
+        }
     </style>
 </head>
 <body>
     <div class="background"></div> <!-- 固定背景图层 -->
-    <h1>欢迎！</h1>
+    <h1>总站永久地址：111ccc.cv</h1>
     <div class="button-container">
-        <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">1号通道</div>
-        <div class="button button2" data-url="http://xchm07091025.hm92e.hmkk.dyxmf.net/client/index.html#/home">2号通道</div>
-        <div class="button button3" data-url="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R">3号通道</div>
-        <div class="button button4" data-url="http://hjgnx0nn.692z.cc">4号通道</div>
-        <div class="button button5" data-url="https://tzforbu.yafpn.cn/#/?code=ufbq75">5号通道</div>
+        <div class="button button1">
+            <span>1号通道</span>
+            <span class="go-text">GO></span>
+        </div>
+        <div class="button button2">
+            <span>2号通道</span>
+            <span class="go-text">GO></span>
+        </div>
+        <div class="button button3">
+            <span>3号通道</span>
+            <span class="go-text">GO></span>
+        </div>
+        <div class="button button4">
+            <span>4号通道</span>
+            <span class="go-text">GO></span>
+        </div>
+        <div class="button button5">
+            <span>5号通道</span>
+            <span class="go-text">GO></span>
+        </div>
     </div>
 
     <script>
