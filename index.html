@@ -32,13 +32,15 @@
             min-height: 100vh; /* 保证背景图始终覆盖整个视口高度 */
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 居中内容 */
+            justify-content: flex-start; /* 内容从顶部开始排列 */
             align-items: center;  /* 居中内容 */
         }
 
         h1 {
             color: #fff;
-            margin-top: 50px;
+            margin-top: 20px; /* 减少顶部间距 */
+            font-size: 36px; /* 增大标题字体 */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
         }
 
         .button-container {
@@ -47,48 +49,50 @@
             gap: 20px;
             width: 100%;  /* 使按钮容器宽度为100% */
             max-width: 400px; /* 设置按钮容器的最大宽度，避免按钮过大 */
-            margin: 0 auto; /* 按钮容器居中 */
+            margin-top: 30px; /* 减少按钮与标题的间距 */
+            margin-bottom: 20px; /* 增加底部间距，避免按钮与屏幕底部太近 */
         }
 
         .button {
             color: white;
-            padding: 12px 0; /* 缩小按钮的高度 */
+            padding: 15px 0; /* 增加按钮高度 */
             width: 80%; /* 让按钮宽度为容器的80% */
             max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
             margin: 0 auto;
             text-align: center;
-            font-size: 18px;
-            border-radius: 8px;
+            font-size: 20px; /* 增大按钮字体 */
+            border-radius: 12px; /* 增加按钮圆角，显得更柔和 */
             transition: background-color 0.3s ease, opacity 0.3s ease;
-            opacity: 1; /* 完全不透明 */
+            opacity: 0.9; /* 设置默认的透明度 */
             user-select: none; /* 禁止文本选择 */
             cursor: pointer;
             box-sizing: border-box; /* 确保内外边距计算正确 */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* 为按钮文字加上阴影 */
         }
 
         .button:hover {
-            opacity: 0.95; /* 悬停时减少透明度 */
+            opacity: 1; /* 悬停时完全不透明 */
         }
 
-        /* 设置不同颜色的按钮 */
+        /* 设置统一色调的按钮 */
         .button1 {
-            background-color: rgba(76, 175, 80, 0.9); /* 设置较不透明的绿色 */
+            background-color: rgba(33, 150, 243, 0.8); /* 透明的蓝色 */
         }
 
         .button2 {
-            background-color: rgba(33, 150, 243, 0.9); /* 设置较不透明的蓝色 */
+            background-color: rgba(3, 169, 244, 0.8); /* 透明的较浅蓝色 */
         }
 
         .button3 {
-            background-color: rgba(255, 87, 34, 0.9); /* 设置较不透明的橙色 */
+            background-color: rgba(0, 188, 212, 0.8); /* 透明的海洋蓝 */
         }
 
         .button4 {
-            background-color: rgba(156, 39, 176, 0.9); /* 设置较不透明的紫色 */
+            background-color: rgba(63, 81, 181, 0.8); /* 透明的深蓝色 */
         }
 
         .button5 {
-            background-color: rgba(255, 193, 7, 0.9); /* 设置较不透明的黄色 */
+            background-color: rgba(25, 118, 210, 0.8); /* 透明的亮蓝色 */
         }
     </style>
 </head>
