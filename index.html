@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>有趣的网站</title>
     <style>
         /* 设置 html 和 body 的高度为100%，并确保最小高度为视口高度 */
@@ -39,18 +39,18 @@
         h1 {
             color: #fff;
             margin-top: 10px; /* 减少顶部间距，文字和按钮更接近 */
-            font-size: 36px; /* 调整为三分之一 */
+            font-size: 6vw; /* 使用相对单位，使标题大小根据屏幕大小调整 */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 100%;  /* 使按钮容器宽度为100% */
+            gap: 5vw; /* 使用相对单位，调整按钮之间的间距 */
+            width: 80vw;  /* 使按钮容器宽度为视口的80% */
             max-width: 400px; /* 设置按钮容器的最大宽度，避免按钮过大 */
-            margin-top: 30px; /* 减少按钮与标题的间距 */
-            margin-bottom: 20px; /* 增加底部间距，避免按钮与屏幕底部太近 */
+            margin-top: 5vh; /* 增加按钮与标题的间距 */
+            margin-bottom: 10vh; /* 增加底部间距，避免按钮与屏幕底部太近 */
         }
 
         .button {
@@ -58,12 +58,12 @@
             justify-content: space-between; /* 使文字和GO按钮两侧分开 */
             align-items: center; /* 垂直居中 */
             color: white;
-            padding: 15px 0; /* 增加按钮高度 */
+            padding: 3vh 0; /* 使用相对单位设置按钮的高度 */
             width: 80%; /* 让按钮宽度为容器的80% */
             max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
             margin: 0 auto;
             text-align: left; /* 让文字左对齐 */
-            font-size: 20px; /* 增大按钮字体 */
+            font-size: 4vw; /* 使用相对单位，调整按钮字体大小 */
             border-radius: 12px; /* 增加按钮圆角，显得更柔和 */
             transition: background-color 0.3s ease, opacity 0.3s ease;
             opacity: 0.9; /* 设置默认的透明度 */
