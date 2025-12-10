@@ -2,13 +2,14 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>有趣的网站</title>
     <style>
         /* 设置 html 和 body 的高度为100%，并确保最小高度为视口高度 */
         html, body {
             height: 100%;
             margin: 0; /* 去除默认的页边距 */
+            font-size: 16px; /* 设置根元素字体大小，使用 rem 单位 */
         }
 
         /* 背景图固定不动，背景始终覆盖屏幕 */
@@ -39,15 +40,15 @@
         h1 {
             color: #fff;
             margin-top: 10px; /* 减少顶部间距，文字和按钮更接近 */
-            font-size: 6vw; /* 使用相对单位，使标题大小根据屏幕大小调整 */
+            font-size: 6rem; /* 使用 rem 单位，确保标题大小与其他元素一致 */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 5vw; /* 使用相对单位，调整按钮之间的间距 */
-            width: 80vw;  /* 使按钮容器宽度为视口的80% */
+            gap: 2rem; /* 增加按钮之间的间距 */
+            width: 80%;  /* 使按钮容器宽度为视口的80% */
             max-width: 400px; /* 设置按钮容器的最大宽度，避免按钮过大 */
             margin-top: 5vh; /* 增加按钮与标题的间距 */
             margin-bottom: 10vh; /* 增加底部间距，避免按钮与屏幕底部太近 */
@@ -58,12 +59,12 @@
             justify-content: space-between; /* 使文字和GO按钮两侧分开 */
             align-items: center; /* 垂直居中 */
             color: white;
-            padding: 3vh 0; /* 使用相对单位设置按钮的高度 */
-            width: 80%; /* 让按钮宽度为容器的80% */
+            padding: 2rem 0; /* 增加按钮的上下内边距，确保其在小屏幕上有足够的点击空间 */
+            width: 100%; /* 按钮宽度占据容器100% */
             max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
             margin: 0 auto;
             text-align: left; /* 让文字左对齐 */
-            font-size: 4vw; /* 使用相对单位，调整按钮字体大小 */
+            font-size: 1.5rem; /* 使用 rem 单位，保持字体与页面元素的一致性 */
             border-radius: 12px; /* 增加按钮圆角，显得更柔和 */
             transition: background-color 0.3s ease, opacity 0.3s ease;
             opacity: 0.9; /* 设置默认的透明度 */
@@ -71,8 +72,8 @@
             cursor: pointer;
             box-sizing: border-box; /* 确保内外边距计算正确 */
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* 为按钮文字加上阴影 */
-            padding-left: 20px; /* 为文字和按钮左边增加一点间距 */
-            padding-right: 20px; /* 为右侧的GO按钮加一点间距 */
+            padding-left: 1rem; /* 为文字和按钮左边增加一点间距 */
+            padding-right: 1rem; /* 为右侧的GO按钮加一点间距 */
         }
 
         .button:hover {
@@ -101,7 +102,7 @@
         }
 
         .go-text {
-            font-size: 14px; /* GO 字样的字体稍微小一点 */
+            font-size: 1rem; /* GO 字样的字体稍微小一点 */
             font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
             letter-spacing: 1px; /* 适当的字间距，让它更明显 */
         }
@@ -109,7 +110,7 @@
 </head>
 <body>
     <div class="background"></div> <!-- 固定背景图层 -->
-    <h1>永久总站</h1>
+    <h1>永久总站1</h1>
     <div class="button-container">
         <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
             <span>1号通道</span>
