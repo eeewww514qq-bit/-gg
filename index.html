@@ -105,13 +105,35 @@
             font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
             letter-spacing: 1px; /* 适当的字间距，让它更明显 */
         }
+
+        /* 底部图片容器 */
+        .image-link {
+            margin-top: 30px; /* 与最后一个按钮保持一定的固定距离 */
+            padding-bottom: 20px; /* 让图片距离底部有一定空间 */
+            width: 100%;
+            text-align: center;
+        }
+
+        .image-link img {
+    width: 100%;
+    max-width: 320px; /* 设置图片的最大宽度 */
+    height: auto; /* 自动调整高度 */
+    aspect-ratio: 2 / 1; /* 设置纵横比，宽度是高度的两倍 */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 添加点击时的动画效果 */
+}
+
+        .image-link img:hover {
+            transform: scale(1.05); /* 悬停时放大效果 */
+        }
     </style>
 </head>
 <body>
     <div class="background"></div> <!-- 固定背景图层 -->
     <h1>永久总站</h1>
     <div class="button-container">
-        <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
+        <div class="button button1" data-url="http://p58c.cc">
             <span>1号通道</span>
             <span class="go-text">GO></span>
         </div>
@@ -119,7 +141,7 @@
             <span>2号通道</span>
             <span class="go-text">GO></span>
         </div>
-        <div class="button button3" data-url="http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/amazing?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R">
+        <div class="button button3" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx">
             <span>3号通道</span>
             <span class="go-text">GO></span>
         </div>
@@ -131,6 +153,11 @@
             <span>5号通道</span>
             <span class="go-text">GO></span>
         </div>
+    </div>
+
+    <!-- 底部的可点击图片 -->
+    <div class="image-link">
+        <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMgNxpOvkbwYbn3qMs5swq9wxgYCKtLgADJQACbfXYVWB1DmetYZBcNgQ.jpeg" alt="点击访问" onclick="window.open('https://111ccc.cc', '_blank')">
     </div>
 
     <script>
