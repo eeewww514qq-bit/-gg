@@ -11,25 +11,12 @@
             margin: 0; /* 去除默认的页边距 */
         }
 
-        /* 背景图固定不动，背景始终覆盖屏幕 */
-        .background {
-            position: fixed; /* 使用固定定位，确保背景不动 */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMebdpOoawP_DIKwZP6fDwES9FAdMxSwACyBwAAm312FXpz9LDj1NinzYE.jpeg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1; /* 背景图位于最底层，内容部分在上面 */
-        }
-
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 0;
             color: white;
-            min-height: 100vh; /* 保证背景图始终覆盖整个视口高度 */
+            min-height: 100vh; /* 保证内容区域始终覆盖整个视口高度 */
             display: flex;
             flex-direction: column;
             justify-content: flex-start; /* 内容从顶部开始排列 */
@@ -105,32 +92,9 @@
             font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
             letter-spacing: 1px; /* 适当的字间距，让它更明显 */
         }
-
-        /* 底部图片容器 */
-        .image-link {
-            margin-top: 30px; /* 与最后一个按钮保持一定的固定距离 */
-            padding-bottom: 20px; /* 让图片距离底部有一定空间 */
-            width: 100%;
-            text-align: center;
-        }
-
-        .image-link img {
-    width: 100%;
-    max-width: 320px; /* 设置图片的最大宽度 */
-    height: auto; /* 自动调整高度 */
-    aspect-ratio: 2 / 1; /* 设置纵横比，宽度是高度的两倍 */
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* 添加点击时的动画效果 */
-}
-
-        .image-link img:hover {
-            transform: scale(1.05); /* 悬停时放大效果 */
-        }
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- 固定背景图层 -->
     <h1>永久总站</h1>
     <div class="button-container">
         <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
@@ -153,11 +117,6 @@
             <span>5号通道</span>
             <span class="go-text">GO></span>
         </div>
-    </div>
-
-    <!-- 底部的可点击图片 -->
-    <div class="image-link">
-        <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMgNxpOvkbwYbn3qMs5swq9wxgYCKtLgADJQACbfXYVWB1DmetYZBcNgQ.jpeg" alt="点击访问" onclick="window.open('http://cyxx2.pmlcultureforstreaming.top/yxzhibo.php?_wv=9983&#/liveshow?ic=ertgrvjf&openid=s59s12XTKmb-jIth2Xr2R')">
     </div>
 
     <script>
