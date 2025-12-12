@@ -11,6 +11,19 @@
             margin: 0; /* 去除默认的页边距 */
         }
 
+        /* 背景图固定不动，背景始终覆盖屏幕 */
+        .background {
+            position: fixed; /* 使用固定定位，确保背景不动 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMk6lpPD-WWsHEYImvHtAAAVwZ1XljhX8AAvwhAAJQB-BVB8g5cSJbG4o2BA.jpeg'); /* 背景图片 URL */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* 背景图位于最底层，内容部分在上面 */
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -95,6 +108,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div> <!-- 固定背景图层 -->
     <h1>永久总站</h1>
     <div class="button-container">
         <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
