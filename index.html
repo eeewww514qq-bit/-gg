@@ -43,14 +43,25 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
         }
 
+        /* 设置金黄色小字 */
+        .sub-text {
+            color: #FFD700; /* 金黄色 */
+            font-size: 16px; /* 较小的字体 */
+            margin-top: 10px; /* 增加与标题的间距 */
+            font-style: italic; /* 斜体 */
+            letter-spacing: 1px; /* 增加字间距 */
+        }
+
+        /* 修改按钮容器的样式，使按钮在一行显示 */
         .button-container {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap; /* 允许按钮换行 */
             gap: 20px;
             width: 100%;  /* 使按钮容器宽度为100% */
-            max-width: 400px; /* 设置按钮容器的最大宽度，避免按钮过大 */
+            max-width: 900px; /* 设置按钮容器的最大宽度，避免按钮过大 */
             margin-top: 30px; /* 减少按钮与标题的间距 */
             margin-bottom: 20px; /* 增加底部间距，避免按钮与屏幕底部太近 */
+            justify-content: center; /* 居中按钮 */
         }
 
         .button {
@@ -59,7 +70,7 @@
             align-items: center; /* 垂直居中 */
             color: white;
             padding: 15px 0; /* 增加按钮高度 */
-            width: 80%; /* 让按钮宽度为容器的80% */
+            width: calc(50% - 10px); /* 每行显示两个按钮 */
             max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
             margin: 0 auto;
             text-align: left; /* 让文字左对齐 */
@@ -104,40 +115,55 @@
             background-color: rgba(128, 0, 128, 0.8); /* 透明的亮蓝色 */
         }
 
+        /* GO 字样的颜色 */
         .go-text {
             font-size: 14px; /* GO 字样的字体稍微小一点 */
             font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
             letter-spacing: 1px; /* 适当的字间距，让它更明显 */
+        }
+
+        /* 设置绿色GO字样的颜色 */
+        .go-green { 
+            color: #28a745; /* 绿色 */
+        }
+
+        /* 设置红色GO字样的颜色 */
+        .go-red { 
+            color: #dc3545; /* 红色 */
         }
     </style>
 </head>
 <body>
     <div class="background"></div> <!-- 固定背景图层 -->
     <h1>永久总站</h1>
+
+    <!-- 金黄色的小字 -->
+    <p class="sub-text">欢迎来到我们的站点，每个通道各不相同，点击进入体验精彩内容！</p> 
+
     <div class="button-container">
         <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
             <span>1号通道</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
         </div>
         <div class="button button2" data-url="http://6e8e.cc">
             <span>2号通道</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 红色GO -->
         </div>
         <div class="button button3" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx">
             <span>3号通道</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
         </div>
         <div class="button button4" data-url="http://hjgnx0nn.692z.cc">
             <span>4号通道</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 红色GO -->
         </div>
         <div class="button button5" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75">
             <span>5号通道</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
         </div>
         <div class="button button6" data-url="https://eeewww514qq-bit.github.io/im.qq.com/">
             <span>勉费白嫖</span>
-            <span class="go-text">GO></span>
+            <span class="go-text go-green">GO></span> <!-- 红色GO -->
         </div>
     </div>
 
