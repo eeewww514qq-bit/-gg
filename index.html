@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有趣的网站</title>
     <style>
-        /* 设置 html 和 body 的高度为100%，并确保最小高度为视口高度 */
         html, body {
             height: 100%;
-            margin: 0; /* 去除默认的页边距 */
+            margin: 0;
         }
 
-        /* 背景图固定不动，背景始终覆盖屏幕 */
         .background {
-            position: fixed; /* 使用固定定位，确保背景不动 */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMk6lpPD-WWsHEYImvHtAAAVwZ1XljhX8AAvwhAAJQB-BVB8g5cSJbG4o2BA.jpeg'); /* 背景图片 URL */
+            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMk6lpPD-WWsHEYImvHtAAAVwZ1XljhX8AAvwhAAJQB-BVB8g5cSJbG4o2BA.jpeg');
             background-size: cover;
             background-position: center;
-            z-index: -1; /* 背景图位于最底层，内容部分在上面 */
+            z-index: -1;
         }
 
         body {
@@ -29,177 +27,154 @@
             text-align: center;
             padding: 0;
             color: white;
-            min-height: 100vh; /* 保证内容区域始终覆盖整个视口高度 */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* 内容从顶部开始排列 */
-            align-items: center;  /* 居中内容 */
+            justify-content: flex-start;
+            align-items: center;
         }
 
         h1 {
             color: #fff;
-            margin-top: 10px; /* 减少顶部间距，文字和按钮更接近 */
-            font-size: 36px; /* 调整为三分之一 */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* 为标题加上阴影效果 */
+            margin-top: 10px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
-        /* 设置金黄色小字 */
         .sub-text {
-            color: #FFD700; /* 金黄色 */
-            font-size: 16px; /* 较小的字体 */
-            margin-top: 10px; /* 增加与标题的间距 */
-            font-style: italic; /* 斜体 */
-            letter-spacing: 1px; /* 增加字间距 */
+            color: #FFD700;
+            font-size: 16px;
+            margin-top: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
         }
 
-        /* 修改按钮容器的样式，使按钮在一行显示 */
         .button-container {
             display: flex;
-            flex-wrap: wrap; /* 允许按钮换行 */
+            flex-wrap: wrap;
             gap: 20px;
-            width: 100%;  /* 使按钮容器宽度为100% */
-            max-width: 900px; /* 设置按钮容器的最大宽度，避免按钮过大 */
-            margin-top: 30px; /* 减少按钮与标题的间距 */
-            margin-bottom: 20px; /* 增加底部间距，避免按钮与屏幕底部太近 */
-            justify-content: center; /* 居中按钮 */
+            width: 100%;
+            max-width: 900px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            justify-content: center;
         }
 
         .button {
             display: flex;
-            justify-content: space-between; /* 使文字和GO按钮两侧分开 */
-            align-items: center; /* 垂直居中 */
+            justify-content: space-between;
+            align-items: center;
             color: white;
-            padding: 15px 0; /* 增加按钮高度 */
-            width: calc(50% - 10px); /* 每行显示两个按钮 */
-            max-width: 100%; /* 按钮最大宽度为容器宽度的100% */
-            margin: 0 auto;
-            text-align: left; /* 让文字左对齐 */
-            font-size: 20px; /* 增大按钮字体 */
-            border-radius: 12px; /* 增加按钮圆角，显得更柔和 */
-            transition: background-color 0.3s ease, opacity 0.3s ease;
-            opacity: 0.9; /* 设置默认的透明度 */
-            user-select: none; /* 禁止文本选择 */
+            padding: 15px 0;
+            width: calc(50% - 10px);
+            font-size: 20px;
+            border-radius: 12px;
+            opacity: 0.9;
             cursor: pointer;
-            box-sizing: border-box; /* 确保内外边距计算正确 */
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* 为按钮文字加上阴影 */
-            padding-left: 20px; /* 为文字和按钮左边增加一点间距 */
-            padding-right: 20px; /* 为右侧的GO按钮加一点间距 */
+            box-sizing: border-box;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .button:hover {
-            opacity: 1; /* 悬停时完全不透明 */
+            opacity: 1;
         }
 
-        /* 设置统一色调的按钮 */
-        .button1 {
-            background-color: rgba(33, 150, 243, 0.8); /* 透明的蓝色 */
-        }
+        .button1 { background-color: rgba(33, 150, 243, 0.8); }
+        .button2 { background-color: rgba(3, 169, 244, 0.8); }
+        .button3 { background-color: rgba(0, 188, 212, 0.8); }
+        .button4 { background-color: rgba(63, 81, 181, 0.8); }
+        .button5 { background-color: rgba(33, 150, 243, 0.8); }
+        .button6 { background-color: rgba(128, 0, 128, 0.8); }
 
-        .button2 {
-            background-color: rgba(3, 169, 244, 0.8); /* 透明的较浅蓝色 */
-        }
-
-        .button3 {
-            background-color: rgba(0, 188, 212, 0.8); /* 透明的海洋蓝 */
-        }
-
-        .button4 {
-            background-color: rgba(63, 81, 181, 0.8); /* 透明的深蓝色 */
-        }
-
-        .button5 {
-            background-color: rgba(33, 150, 243, 0.8); /* 透明的亮蓝色 */
-        }
-
-        .button6 {
-            background-color: rgba(128, 0, 128, 0.8); /* 透明的亮蓝色 */
-        }
-
-        /* GO 字样的颜色 */
         .go-text {
-            font-size: 14px; /* GO 字样的字体稍微小一点 */
-            font-style: italic; /* 让 GO 字体变成斜体，增加设计感 */
-            letter-spacing: 1px; /* 适当的字间距，让它更明显 */
+            font-size: 14px;
+            font-style: italic;
         }
 
-        /* 设置绿色GO字样的颜色 */
-        .go-green { 
-            color: #28a745; /* 绿色 */
+        .go-green {
+            color: #28a745;
         }
 
-        /* 设置红色GO字样的颜色 */
-        .go-red { 
-            color: #dc3545; /* 红色 */
-        }
+        /* ===== 左下角 QQ 群按钮（文字版，适合手机） ===== */
+.qq-group-btn {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #12B7F5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    /* 文字样式 */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.qq-group-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- 固定背景图层 -->
-    <h1>永久总站</h1>
 
-    <!-- 金黄色的小字 -->
-    <p class="sub-text">遇到打不开的情况更换浏览器访问本站即可解决，每个通道各有特色，点击进入体验精彩内容！</p> 
+<div class="background"></div>
 
-    <div class="button-container">
-        <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
-            <span>1号通道</span>
-            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
-        </div>
-        <div class="button button2" data-url="http://6e8e.cc">
-            <span>2号通道</span>
-            <span class="go-text go-green">GO></span> <!-- 红色GO -->
-        </div>
-        <div class="button button3" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx">
-            <span>3号通道</span>
-            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
-        </div>
-        <div class="button button4" data-url="http://hjgnx0nn.692z.cc">
-            <span>4号通道</span>
-            <span class="go-text go-green">GO></span> <!-- 红色GO -->
-        </div>
-        <div class="button button5" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75">
-            <span>5号通道</span>
-            <span class="go-text go-green">GO></span> <!-- 绿色GO -->
-        </div>
-        <div class="button button6" data-url="https://eeewww514qq-bit.github.io/im.qq.com/">
-            <span>勉费白嫖</span>
-            <span class="go-text go-green">GO></span> <!-- 红色GO -->
-        </div>
-    </div>
+<h1>永久总站</h1>
+<p class="sub-text">遇到通道打不开的情况更换浏览器访问本站即可解决，每个都不一样各有特色！</p>
 
-    <script>
-        // 禁用右键菜单
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault(); // 禁用右键菜单
-        });
+<div class="button-container">
+    <div class="button button1" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh"><span>1号通道</span><span class="go-text go-green">GO></span></div>
+    <div class="button button2" data-url="http://6e8e.cc"><span>2号通道</span><span class="go-text go-green">GO></span></div>
+    <div class="button button3" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx"><span>3号通道</span><span class="go-text go-green">GO></span></div>
+    <div class="button button4" data-url="http://hjgnx0nn.692z.cc"><span>4号通道</span><span class="go-text go-green">GO></span></div>
+    <div class="button button5" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75"><span>5号通道</span><span class="go-text go-green">GO></span></div>
+    <div class="button button6" data-url="https://eeewww514qq-bit.github.io/im.qq.com/"><span>勉费白嫖</span><span class="go-text go-green">GO></span></div>
+</div>
 
-        // 给每个按钮添加点击事件，触发跳转
-        document.querySelectorAll('.button').forEach(function(button) {
-            button.addEventListener('click', function() {
-                var url = button.getAttribute('data-url');
-                window.open(url, '_blank'); // 通过 JavaScript 跳转到链接
-            });
-        });
-    </script>
+<!-- 左下角 QQ 群按钮 -->
+<div class="qq-group-btn" id="qqGroupBtn" title="加入QQ群">
+    QQ群
+</div>
 
-    <!-- Tawk.to 客服代码 -->
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
+<script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
 
-        // 设置语言为中文
-        Tawk_API.onLoad = function() {
-            Tawk_API.setLanguage('zh');  // 设置为中文
-        };
-    })();
+    document.querySelectorAll('.button').forEach(btn => {
+        btn.onclick = () => window.open(btn.dataset.url, '_blank');
+    });
+
+    // QQ 群跳转（修改群号即可）
+    document.getElementById('qqGroupBtn').onclick = function () {
+        window.open(
+            'http://www.930.mom',
+            '_blank'
+        );
+    };
 </script>
-    <!-- End of Tawk.to Script -->
+
+<!-- Tawk.to 客服代码（原样保留） -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
 </body>
 </html>
