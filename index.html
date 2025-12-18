@@ -37,8 +37,17 @@
         h1 {
             color: #fff;
             margin-top: 10px;
+            margin-bottom: 0;   /* ✅ 去掉标题下间隙 */
             font-size: 36px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* ===== 标题正下方小字（0 间隙） ===== */
+        .top-small-text {
+            font-size: 16px;
+            margin-top: 0;      /* ✅ 不留空隙 */
+            margin-bottom: 6px;
+            color: inherit;
         }
 
         .sub-text {
@@ -96,34 +105,31 @@
             color: #28a745;
         }
 
-        /* ===== 左下角 QQ 群按钮（文字版，适合手机） ===== */
-.qq-group-btn {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #12B7F5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    transition: transform 0.2s ease, opacity 0.2s ease;
+        .qq-group-btn {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #12B7F5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-    /* 文字样式 */
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.qq-group-btn:hover {
-    transform: scale(1.05);
-    opacity: 0.95;
-}
+        .qq-group-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
     </style>
 </head>
 <body>
@@ -131,7 +137,10 @@
 <div class="background"></div>
 
 <h1>永久总站</h1>
-<p class="sub-text">遇到通道打不开的情况更换浏览器访问本站即可，推介使用QQ浏览器！</p>
+<p class="top-small-text">
+主用111ccc.cc  备用333ccc.cc</p>
+
+<p class="sub-text">遇到通道打不开的情况更换浏览器访问本站即可<br>推荐使用QQ浏览器！</p>
 
 <div class="button-container">
     <div class="button button1" data-url="http://6e8e.cc"><span>2号通道</span><span class="go-text go-green">GO></span></div>
@@ -142,28 +151,20 @@
     <div class="button button6" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75"><span>5号通道 </span><span class="go-text go-green">GO></span></div>
 </div>
 
-<!-- 左下角 QQ 群按钮 -->
 <div class="qq-group-btn" id="qqGroupBtn" title="加入QQ群">
     QQ群
 </div>
 
 <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
-
     document.querySelectorAll('.button').forEach(btn => {
         btn.onclick = () => window.open(btn.dataset.url, '_blank');
     });
-
-    // QQ 群跳转（修改群号即可）
     document.getElementById('qqGroupBtn').onclick = function () {
-        window.open(
-            'http://www.930.mom',
-            '_blank'
-        );
+        window.open('http://www.930.mom', '_blank');
     };
 </script>
 
-<!-- Tawk.to 客服代码（原样保留） -->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
