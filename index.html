@@ -37,17 +37,15 @@
         h1 {
             color: #fff;
             margin-top: 10px;
-            margin-bottom: 0;   /* ✅ 去掉标题下间隙 */
+            margin-bottom: 0;
             font-size: 36px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
-        /* ===== 标题正下方小字（0 间隙） ===== */
         .top-small-text {
             font-size: 16px;
-            margin-top: 0;      /* ✅ 不留空隙 */
+            margin-top: 0;
             margin-bottom: 6px;
-            color: inherit;
         }
 
         .sub-text {
@@ -74,35 +72,36 @@
             justify-content: space-between;
             align-items: center;
             color: white;
-            padding: 15px 0;
+            padding: 15px 20px;
             width: calc(50% - 10px);
             font-size: 20px;
             border-radius: 12px;
-            opacity: 0.9;
+            opacity: 0.92;
             cursor: pointer;
             box-sizing: border-box;
-            padding-left: 20px;
-            padding-right: 20px;
+            transition: transform 0.15s ease, opacity 0.15s ease;
         }
 
         .button:hover {
             opacity: 1;
+            transform: translateY(-2px);
         }
 
-        .button1 { background-color: rgba(33, 150, 243, 0.8); }
-        .button2 { background-color: rgba(3, 169, 244, 0.8); }
-        .button3 { background-color: rgba(0, 188, 212, 0.8); }
-        .button4 { background-color: rgba(63, 81, 181, 0.8); }
-        .button5 { background-color: rgba(128, 0, 128, 0.8); }
-        .button6 { background-color: rgba(33, 150, 243, 0.8); }
-.button1 .go-text{color: red;}
+        /* ===== 鲜艳高区分按钮颜色 ===== */
+        .button1 { background: linear-gradient(135deg, #3f51ff, #7c4dff); }
+        .button2 { background: linear-gradient(135deg, #00c853, #64dd17); }
+        .button3 { background: linear-gradient(135deg, #ff9100, #ff6d00); }
+        .button4 { background: linear-gradient(135deg, #d500f9, #ff1744); }
+        .button5 { background: linear-gradient(135deg, #ffd600, #ffab00); color:#000; }
+        .button6 { background: linear-gradient(135deg, #00bcd4, #0091ea); }
+
         .go-text {
             font-size: 14px;
             font-style: italic;
         }
 
         .go-green {
-            color: #28a745;
+            color: #00ff7f;
         }
 
         .qq-group-btn {
@@ -123,7 +122,6 @@
             color: #fff;
             font-size: 16px;
             font-weight: bold;
-            letter-spacing: 1px;
         }
 
         .qq-group-btn:hover {
@@ -142,17 +140,15 @@
 <p class="sub-text">遇到通道打不开的情况更换浏览器访问本站即可<br>推荐使用QQ浏览器！</p>
 
 <div class="button-container">
-    <div class="button button1" data-url="http://6e8e.cc"><span>2号通道</span><span class="go-text go-green">异常勿下</span></div>
-    <div class="button button2" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh"><span>1号通道</span><span class="go-text go-green">正常</span></div>
-    <div class="button button3" data-url="http://g62k.ridxrcm.cn/?Oid=c2Rtcmkwbm4"><span>4号通道</span><span class="go-text go-green">正常</span></div>
-    <div class="button button4" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx"><span>3号通道</span><span class="go-text go-green">正常</span></div>
-    <div class="button button5" data-url="https://eeewww514qq-bit.github.io/im.qq.com"><span>勉费白嫖</span><span class="go-text go-green">正常</span></div>
-    <div class="button button6" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75"><span>5号通道 </span><span class="go-text go-green">正常</span></div>
+    <div class="button button1" data-url="http://6e8e.cc"><span>2号通道</span><span class="go-text">异常勿下</span></div>
+    <div class="button button2" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh"><span>1号通道</span><span class="go-text">正常</span></div>
+    <div class="button button3" data-url="http://g62k.ridxrcm.cn/?Oid=c2Rtcmkwbm4"><span>4号通道</span><span class="go-text">正常</span></div>
+    <div class="button button4" data-url="http://chaxun.ccpiteco.net/?NVYtW&yi=ertgrvjfsuwooecqfx"><span>3号通道</span><span class="go-text">正常</span></div>
+    <div class="button button5" data-url="https://eeewww514qq-bit.github.io/im.qq.com"><span>勉费白嫖</span><span class="go-text">正常</span></div>
+    <div class="button button6" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75"><span>5号通道</span><span class="go-text">正常</span></div>
 </div>
 
-<div class="qq-group-btn" id="qqGroupBtn" title="加入QQ群">
-    QQ群
-</div>
+<div class="qq-group-btn" id="qqGroupBtn">QQ群</div>
 
 <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
@@ -162,18 +158,6 @@
     document.getElementById('qqGroupBtn').onclick = function () {
         window.open('http://www.930.mom', '_blank');
     };
-</script>
-
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
 </script>
 
 </body>
