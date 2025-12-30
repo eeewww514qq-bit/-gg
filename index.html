@@ -1,209 +1,156 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>有趣的网站</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学习资料导航</title>
 
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEObqRpVAAByTcJw636vrq6U1bqzbest6cAAmspAAJ51aBW5JDm5R1N0Ic4BA.jpeg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 0;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
+.background {
+    position: fixed;
+    inset: 0;
+    background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEObqRpVAAByTcJw636vrq6U1bqzbest6cAAmspAAJ51aBW5JDm5R1N0Ic4BA.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 
-        h1 {
-            color: #fff;
-            margin-top: 10px;
-            margin-bottom: 0;
-            font-size: 36px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-        }
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .top-small-text {
-            font-size: 16px;
-            margin-top: 0;
-            margin-bottom: 6px;
-            color: inherit;
-        }
+/* ===== 标题区域间距优化 ===== */
+h1 {
+    margin-top: 12px;
+    margin-bottom: 6px;   /* ↓ 缩小标题下方空白 */
+    font-size: 36px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.6);
+}
 
-        .sub-text {
-           color: #fff3b0;
-           font-size: 20px;
-           margin-top: 10px;
-           font-style: italic;
-           letter-spacing: 1px;
-           text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-       }
+.sub-text {
+    margin-top: 0;        /* ↓ 紧贴标题 */
+    margin-bottom: 8px;   /* ↓ 控制与下方说明的距离 */
+    color: #fff3b0;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
 
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 100%;
-            max-width: 900px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
+.notice {
+    max-width: 880px;
+    margin: 4px auto 0;   /* ↓ 减少空白 */
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: .88;
+}
 
-        .button {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            padding: 15px 0;
-            width: calc(50% - 10px);
-            font-size: 20px;
-            border-radius: 12px;
-            opacity: 0.95;
-            cursor: pointer;
-            box-sizing: border-box;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+/* ===== 按钮区域 ===== */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: 24px auto 20px;
+    justify-content: center;
+}
 
-        .button:hover {
-            opacity: 1;
-        }
+.button {
+    width: calc(50% - 10px);
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    opacity: .95;
+    box-sizing: border-box;
+}
 
-        /* ===== 改动仅在这里：按钮颜色 ===== */
-        .button1 { background: linear-gradient(135deg, #3f51ff, #7c4dff); 
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);}    
-        
-        .button2 { background: linear-gradient(135deg, #00c853, #64dd17);
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);} 
-        
-        .button3 { background: linear-gradient(135deg, #ff9100, #ff6d00); 
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);}
-        
-        .button4 { background: linear-gradient(135deg, #d500f9, #ff1744); 
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);}
-        
-        .button5 { background: linear-gradient(135deg, #ffd600, #ffab00); 
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);}
-            
-        .button6 { background: linear-gradient(135deg, #2b2b2b, #6a6a6a, #2b2b2b); 
-         box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);}
-        /* 只改第一个按钮里的 Go 字样（保留你的设定） */
-        .button1 .go-text {
-            color: #FFD700;
-        }
+.button:hover { opacity: 1; }
 
-        .go-text {
-            font-size: 14px;
-            font-style: italic;
-        }
+.button1 { background: linear-gradient(135deg,#3f51ff,#7c4dff); box-shadow:0 0 8px rgba(255,255,255,.35);}
+.button2 { background: linear-gradient(135deg,#00c853,#64dd17); box-shadow:0 0 8px rgba(255,255,255,.35);}
+.button3 { background: linear-gradient(135deg,#ff9100,#ff6d00); box-shadow:0 0 8px rgba(255,255,255,.35);}
+.button4 { background: linear-gradient(135deg,#d500f9,#ff1744); box-shadow:0 0 8px rgba(255,255,255,.35);}
+.button5 { background: linear-gradient(135deg,#ffd600,#ffab00); box-shadow:0 0 8px rgba(255,255,255,.35);}
+.button6 { background: linear-gradient(135deg,#2b2b2b,#6a6a6a,#2b2b2b); box-shadow:0 0 8px rgba(255,255,255,.35);}
 
-        .go-green {
-            color: #E8FFE8;
-        }
-
-        .qq-group-btn {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #12B7F5;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 9999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .qq-group-btn:hover {
-            transform: scale(1.05);
-            opacity: 0.95;
-        }
-    </style>
+/* ===== 联系方式按钮 ===== */
+.qq-group-btn {
+    margin: 20px auto 36px;
+    padding: 10px 24px;
+    background: rgba(18,183,245,0.9);
+    border-radius: 22px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+</style>
 </head>
+
 <body>
 
 <div class="background"></div>
 
-<h1>学习资料</h1>
-<p class="top-small-text"></p>
+<h1>学习资料导航</h1>
 
 <p class="sub-text">
-    包天以上请保存好口令 或注册账号使用<br>
-        避免会员丢失！
+包天以上请妥善保存账号信息<br>
+避免学习进度丢失
 </p>
 
+<div class="notice">
+本站仅提供第三方学习资源的整理与导航，内容由外部站点提供。
+</div>
+
 <div class="button-container">
-    <div class="button button1" data-url="http://6e8e.cc">
-        <span>2号通道</span><span class="go-text">GO</span>
-    </div>
-    <div class="button button2" data-url="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh">
-        <span>1号通道</span><span class="go-text go-green">GO</span>
-    </div>
-    <div class="button button3" data-url="http://g62k.ridxrcm.cn/?Oid=c2Rtcmkwbm4">
-        <span>4号通道</span><span class="go-text go-green">GO</span>
-    </div>
-    <div class="button button4" data-url="http://IjaMWExiyP.e.haijiacp.com/?NXVsb&La=fqhjjqxcicvsqtddnu">
-        <span>3号通道</span><span class="go-text go-green">GO</span>
-    </div>
-    <div class="button button5" data-url="https://1busin-ebsoo-19cos.cyou">
-        <span>勉费白嫖</span><span class="go-text go-green">GO</span>
-    </div>
-    <div class="button button6" data-url="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75">
-        <span>5号通道</span><span class="go-text go-green">GO</span>
-    </div>
+
+<a class="button button1" href="http://6e8e.cc" target="_blank" rel="noopener">学习站点2</a>
+<a class="button button2" href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" target="_blank" rel="noopener">学习站点1</a>
+<a class="button button3" href="http://g62k.ridxrcm.cn/?Oid=c2Rtcmkwbm4" target="_blank" rel="noopener">学习站点4</a>
+<a class="button button4" href="http://IjaMWExiyP.e.haijiacp.com/?NXVsb&La=fqhjjqxcicvsqtddnu" target="_blank" rel="noopener">学习站点3</a>
+<a class="button button5" href="https://1busin-ebsoo-19cos.cyou" target="_blank" rel="noopener">免费学习资料</a>
+<a class="button button6" href="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75" target="_blank" rel="noopener">学习站点5</a>
+
 </div>
 
-<div class="qq-group-btn" id="qqGroupBtn" title="加入QQ群">
-    QQ群
-</div>
+<p style="font-size:13px;opacity:.75;margin-top:6px;">
+如需交流或反馈问题，可通过以下方式联系
+</p>
 
+<a class="qq-group-btn"
+   href="http://www.930.mom"
+   target="_blank"
+   rel="noopener">
+学习交流群 / 联系方式
+</a>
+
+<!-- 客服 -->
 <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.querySelectorAll('.button').forEach(btn => {
-        btn.onclick = () => window.open(btn.dataset.url, '_blank');
-    });
-    document.getElementById('qqGroupBtn').onclick = function () {
-        window.open('http://www.930.mom', '_blank');
-    };
-</script>
-
-<script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+var s1=document.createElement("script");
 s1.async=true;
 s1.src='https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+document.body.appendChild(s1);
 })();
 </script>
 
