@@ -32,14 +32,14 @@ body {
 /* ===== 标题区域间距优化 ===== */
 h1 {
     margin-top: 12px;
-    margin-bottom: 6px;   /* ↓ 缩小标题下方空白 */
+    margin-bottom: 6px;
     font-size: 36px;
     text-shadow: 2px 2px 6px rgba(0,0,0,.6);
 }
 
 .sub-text {
-    margin-top: 0;        /* ↓ 紧贴标题 */
-    margin-bottom: 8px;   /* ↓ 控制与下方说明的距离 */
+    margin-top: 0;
+    margin-bottom: 8px;
     color: #fff3b0;
     font-size: 18px;
     font-style: italic;
@@ -50,7 +50,7 @@ h1 {
 
 .notice {
     max-width: 880px;
-    margin: 4px auto 0;   /* ↓ 减少空白 */
+    margin: 4px auto 0;
     font-size: 14px;
     line-height: 1.6;
     opacity: .88;
@@ -141,17 +141,17 @@ h1 {
 学习交流群 / 联系方式
 </a>
 
-<!-- 客服 -->
+<!-- 客服 JS 延迟加载 -->
 <script>
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script");
-s1.async=true;
-s1.src='https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-document.body.appendChild(s1);
-})();
+window.addEventListener('load', function(){
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    var s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    document.body.appendChild(s1);
+});
 </script>
 
 </body>
