@@ -101,6 +101,57 @@ h1 {
     color: #fff;
     box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
+
+/* ===== 极简手机弹窗样式 ===== */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.popup-content {
+    background: #fff;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+.popup-content h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.popup-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+}
+
+.popup-close-btn {
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+
+.popup-close-btn:hover {
+    background: #999;
+}
 </style>
 </head>
 
@@ -141,9 +192,19 @@ h1 {
 学习交流群 / 联系方式
 </a>
 
-<!-- 客服 JS 延迟加载 -->
+<!-- ===== 极简手机弹窗 HTML ===== -->
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-content">
+        <h2>截图保存方便下次观看</h2>
+        <p>进不了本站时请更换浏览器，或更换地址地址访问即可！！！<br><br>地址一:111ccc.cc  地址二:333ccc.cc<br>地址三:v6z.xyz</p>
+        <button id="popupCloseBtn" class="popup-close-btn">关闭</button>
+    </div>
+</div>
+
+<!-- 客服 JS 延迟加载 + 弹窗逻辑 -->
 <script>
 window.addEventListener('load', function(){
+    // 客服脚本
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     var s1 = document.createElement("script");
     s1.async = true;
@@ -151,6 +212,45 @@ window.addEventListener('load', function(){
     s1.charset = 'UTF-8';
     s1.setAttribute('crossorigin', '*');
     document.body.appendChild(s1);
+
+    // ===== 弹窗逻辑 =====
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupCloseBtn = document.getElementById('popupCloseBtn');
+
+    // cookie 工具函数
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
+    }
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    // 只在手机端显示
+    if(window.innerWidth > 768) return;
+
+    // 只显示一次
+    if(getCookie('popupShown') === 'true') return;
+
+    function openPopup() {
+        popupOverlay.style.display = 'flex';
+        setCookie('popupShown', 'true', 7); // 7天内不再显示
+    }
+
+    // 点击关闭按钮关闭
+    popupCloseBtn.onclick = function(){
+        popupOverlay.style.display = 'none';
+    }
+
+    // 点击遮罩层关闭
+    popupOverlay.onclick = function(e){
+        if(e.target === popupOverlay) popupOverlay.style.display = 'none';
+    }
+
+    // 延迟 2 秒弹出
+    setTimeout(openPopup, 2000);
 });
 </script>
 
