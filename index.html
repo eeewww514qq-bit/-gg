@@ -196,7 +196,9 @@ h1 {
 <div id="popupOverlay" class="popup-overlay">
     <div class="popup-content">
         <h2>截图保存方便下次观看</h2>
-        <p>进不了本站时请更换浏览器，或更换地址访问即可！！！<br><br>地址一:111ccc.cc  地址二:333ccc.cc<br>地址三:v6z.xyz</p>
+        <p>进不了本站时请更换浏览器，或更换地址访问即可！！！<br><br>
+        地址一111ccc.cc&nbsp;&nbsp;地址二333ccc.cc<br>
+        地址三v6z.xyz</p>
         <button id="popupCloseBtn" class="popup-close-btn">关闭</button>
     </div>
 </div>
@@ -213,40 +215,31 @@ window.addEventListener('load', function(){
     s1.setAttribute('crossorigin', '*');
     document.body.appendChild(s1);
 
-    // ===== 弹窗逻辑 =====
+    // ===== 弹窗逻辑（新进弹，刷新不弹）=====
     const popupOverlay = document.getElementById('popupOverlay');
     const popupCloseBtn = document.getElementById('popupCloseBtn');
 
-    // cookie 工具函数
-    function setCookie(name, value, days) {
-        const d = new Date();
-        d.setTime(d.getTime() + (days*24*60*60*1000));
-        document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
-    }
-    function getCookie(name) {
-        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-        return match ? match[2] : null;
-    }
-
     // 只在手机端显示
-    if(window.innerWidth > 768) return;
+    if (window.innerWidth > 768) return;
 
-    // 只显示一次
-    if(getCookie('popupShown') === 'true') return;
+    // 刷新不弹，新进入才弹
+    if (sessionStorage.getItem('popupShown') === 'true') return;
 
     function openPopup() {
         popupOverlay.style.display = 'flex';
-        setCookie('popupShown', 'true', 7); // 7天内不再显示
+        sessionStorage.setItem('popupShown', 'true');
     }
 
-    // 点击关闭按钮关闭
+    // 关闭按钮
     popupCloseBtn.onclick = function(){
         popupOverlay.style.display = 'none';
     }
 
-    // 点击遮罩层关闭
+    // 点击遮罩关闭
     popupOverlay.onclick = function(e){
-        if(e.target === popupOverlay) popupOverlay.style.display = 'none';
+        if(e.target === popupOverlay){
+            popupOverlay.style.display = 'none';
+        }
     }
 
     // 延迟 2 秒弹出
