@@ -14,9 +14,7 @@ html, body {
 .background {
     position: fixed;
     inset: 0;
-    background-image: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEOrIZpVL_lLWeyMY1J4q0fx9f2lw7RXQAC_iEAAnnVqFaxvnV_4-5AajgE.jpeg');
-    background-size: cover;
-    background-position: center;
+    background: #111 url("/bg.webp") center/cover no-repeat;
     z-index: -1;
 }
 
@@ -29,7 +27,7 @@ body {
     align-items: center;
 }
 
-/* ===== 标题区域间距优化 ===== */
+/* ===== 标题区域 ===== */
 h1 {
     margin-top: 12px;
     margin-bottom: 6px;
@@ -46,14 +44,6 @@ h1 {
     letter-spacing: 1px;
     line-height: 1.5;
     text-shadow: 0 1px 3px rgba(0,0,0,.6);
-}
-
-.notice {
-    max-width: 880px;
-    margin: 4px auto 0;
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: .88;
 }
 
 /* ===== 按钮区域 ===== */
@@ -83,12 +73,41 @@ h1 {
 
 .button:hover { opacity: 1; }
 
-.button1 { background: linear-gradient(135deg,#3f51ff,#7c4dff); box-shadow:0 0 8px rgba(255,255,255,.35);}
-.button2 { background: linear-gradient(135deg,#00c853,#64dd17); box-shadow:0 0 8px rgba(255,255,255,.35);}
-.button3 { background: linear-gradient(135deg,#ff9100,#ff6d00); box-shadow:0 0 8px rgba(255,255,255,.35);}
-.button4 { background: linear-gradient(135deg,#d500f9,#ff1744); box-shadow:0 0 8px rgba(255,255,255,.35);}
-.button5 { background: linear-gradient(135deg,#ffd600,#ffab00); box-shadow:0 0 8px rgba(255,255,255,.35);}
-.button6 { background: linear-gradient(135deg,#2b2b2b,#6a6a6a,#2b2b2b); box-shadow:0 0 8px rgba(255,255,255,.35);}
+/* =====【关键修复：双颜色渐变】===== */
+.button1 {
+    background-color: #7D26CD;
+    background-image: linear-gradient(#7D26CD, #7D26CD);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
+
+.button2 {
+    background-color: #8470FF;
+    background-image: linear-gradient(#8470FF, #8470FF);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
+
+.button3 {
+    background-color: #CAE1FF;
+    background-image: linear-gradient(#CAE1FF, #CAE1FF);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
+
+.button4 {
+    background-color: #EE5C42;
+    background-image: linear-gradient(#EE5C42, #EE5C42);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
+
+.button5 {
+    background-color: #FFD700;
+    background-image: linear-gradient(#FFD700, #FFD700);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
+
+.button6 {
+    background-image: linear-gradient(135deg,#2b2b2b,#6a6a6a,#2b2b2b);
+    box-shadow:0 0 8px rgba(255,255,255,.35);
+}
 
 /* ===== 联系方式按钮 ===== */
 .qq-group-btn {
@@ -102,18 +121,16 @@ h1 {
     box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
 
-/* ===== 极简手机弹窗样式 ===== */
+/* ===== 极简手机弹窗 ===== */
 .popup-overlay {
     display: none;
     position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
+    inset: 0;
     background: rgba(0,0,0,0.6);
     z-index: 9999;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .popup-content {
@@ -124,33 +141,26 @@ h1 {
     width: 90%;
     max-width: 300px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,.3);
 }
 
 .popup-content h2 {
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     font-size: 20px;
 }
 
 .popup-content p {
     font-size: 14px;
     line-height: 1.4;
-    margin: 0 0 12px 0;
+    margin-bottom: 12px;
 }
 
 .popup-close-btn {
-    padding: 10px 0;
     width: 100%;
+    padding: 10px 0;
     border: none;
     border-radius: 6px;
     font-size: 16px;
     background: #ccc;
-    color: #333;
-    cursor: pointer;
-}
-
-.popup-close-btn:hover {
-    background: #999;
 }
 </style>
 </head>
@@ -167,79 +177,49 @@ h1 {
 </p>
 
 <div class="button-container">
-
-<a class="button button1" href="http://6e8e.cc" target="_blank" rel="noopener">学习站点2</a>
+<a class="button button1" href="http://hm02.hmcdn.rzjxbdc.cn/a/608227?67dY" target="_blank" rel="noopener">学习站点2</a>
 <a class="button button2" href="http://47xxus0sn.xagqh.cn/Mr79BrK9Yh" target="_blank" rel="noopener">学习站点1</a>
 <a class="button button3" href="http://g62k.ridxrcm.cn/?Oid=c2Rtcmkwbm4" target="_blank" rel="noopener">学习站点4</a>
 <a class="button button4" href="http://IjaMWExiyP.e.haijiacp.com/?NXVsb&La=fqhjjqxcicvsqtddnu" target="_blank" rel="noopener">学习站点3</a>
 <a class="button button5" href="https://1busin-ebsoo-19cos.cyou" target="_blank" rel="noopener">免费学习资料</a>
-<a class="button button6" href="https://people-img-cos.rednet.cn/2026/01-5/1767597747760__aWRkbS5qcGc.jpg?response-content-type=text/html&code=ufbq75" target="_blank" rel="noopener">学习站点5</a>
-
+<a class="button button6" href="https://cdn.auoktalk.com/1765305207_9a98847a3077bb8d026152b20018639f?code=ufbq75" target="_blank" rel="noopener">学习站点5</a>
 </div>
 
 <p style="font-size:13px;opacity:.75;margin-top:6px;">
 如需交流或反馈问题，可通过以下方式联系
 </p>
 
-<a class="qq-group-btn"
-   href="http://www.930.mom"
-   target="_blank"
-   rel="noopener">
+<a class="qq-group-btn" href="http://www.930.mom" target="_blank" rel="noopener">
 学习交流群 / 联系方式
 </a>
 
-<!-- ===== 极简手机弹窗 HTML ===== -->
 <div id="popupOverlay" class="popup-overlay">
     <div class="popup-content">
         <h2>截图保存方便下次观看</h2>
-        <p>进不了本站时请更换浏览器，或更换地址访问即可！！！<br><br>
+        <p>
+        进不了本站请更换浏览器或地址<br><br>
         地址一111ccc.cc&nbsp;&nbsp;地址二333ccc.cc<br>
-        地址三v6z.xyz</p>
-        <button id="popupCloseBtn" class="popup-close-btn">关闭</button>
+        地址三v6z.xyz
+        </p>
+        <button class="popup-close-btn" onclick="this.closest('.popup-overlay').style.display='none'">关闭</button>
     </div>
 </div>
 
-<!-- 客服 JS 延迟加载 + 弹窗逻辑 -->
 <script>
 window.addEventListener('load', function(){
-    // 客服脚本
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    var s1 = document.createElement("script");
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    document.body.appendChild(s1);
-
-    // ===== 弹窗逻辑（新进弹，刷新不弹）=====
-    const popupOverlay = document.getElementById('popupOverlay');
-    const popupCloseBtn = document.getElementById('popupCloseBtn');
-
-    // 只在手机端显示
-    if (window.innerWidth > 768) return;
-
-    // 刷新不弹，新进入才弹
-    if (sessionStorage.getItem('popupShown') === 'true') return;
-
-    function openPopup() {
-        popupOverlay.style.display = 'flex';
-        sessionStorage.setItem('popupShown', 'true');
+    // 弹窗：仅手机，新进弹
+    if (window.innerWidth <= 768 && !sessionStorage.getItem('popupShown')) {
+        setTimeout(function(){
+            document.getElementById('popupOverlay').style.display = 'flex';
+            sessionStorage.setItem('popupShown','true');
+        }, 1000);
     }
 
-    // 关闭按钮
-    popupCloseBtn.onclick = function(){
-        popupOverlay.style.display = 'none';
-    }
-
-    // 点击遮罩关闭
-    popupOverlay.onclick = function(e){
-        if(e.target === popupOverlay){
-            popupOverlay.style.display = 'none';
-        }
-    }
-
-    // 延迟 2 秒弹出
-    setTimeout(openPopup, 2000);
+    // 客服脚本延迟
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = 'https://embed.tawk.to/693ed8f9e13f1e197a0d91cb/default';
+    document.body.appendChild(s);
 });
 </script>
 
